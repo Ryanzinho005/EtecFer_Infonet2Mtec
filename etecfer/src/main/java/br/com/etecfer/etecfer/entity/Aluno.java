@@ -5,8 +5,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class Aluno {
 
     
@@ -30,72 +38,9 @@ public class Aluno {
     @Column(nullable = false, length = 11)
     private String cpfAluno;
 
-    //métodos construtores
+    
 
-    public Aluno() {
-
-    }
-
-    public Aluno(Integer idAluno, String nomeAluno, String emailAluno, String telefoneAluno, Integer raAluno,
-            String cpfAluno) {
-        this.idAluno = idAluno;
-        this.nomeAluno = nomeAluno;
-        this.emailAluno = emailAluno;
-        this.telefoneAluno = telefoneAluno;
-        this.raAluno = raAluno;
-        this.cpfAluno = cpfAluno;
-    }
-
-    public Integer getIdAluno() {
-        return idAluno;
-    }
-
-    public void setIdAluno(Integer idAluno) {
-        this.idAluno = idAluno;
-    }
-
-    public String getNomeAluno() {
-        return nomeAluno;
-    }
-
-    public void setNomeAluno(String nomeAluno) {
-        this.nomeAluno = nomeAluno;
-    }
-
-    public String getEmailAluno() {
-        return emailAluno;
-    }
-
-    public void setEmailAluno(String emailAluno) {
-        this.emailAluno = emailAluno;
-    }
-
-    public String getTelefoneAluno() {
-        return telefoneAluno;
-    }
-
-    public void setTelefoneAluno(String telefoneAluno) {
-        this.telefoneAluno = telefoneAluno;
-    }
-
-    public Integer getRaAluno() {
-        return raAluno;
-    }
-
-    public void setRaAluno(Integer raAluno) {
-        this.raAluno = raAluno;
-    }
-
-    public String getCpfAluno() {
-        return cpfAluno;
-    }
-
-    public void setCpfAluno(String cpfAluno) {
-        this.cpfAluno = cpfAluno;
-    }
-
-    // métodos acessores (getters e setters)
-
+   
     
     
 }
