@@ -23,6 +23,25 @@
     <label>Carga Horária:</label>
     <input type="text" th:field="*{chDisciplina}" />
     <br /> 
+
+    <label for="idCurso">Curso:</label>
+    <select th:field="*{curso}">
+        <option value="" disabled selected>Selecione um curso</option>
+        <option th:each="curso : ${cursos}"
+                th:text="${curso.nomeCurso}"
+                th:value="${curso.idCurso}"></option>
+    </select>
+    <br/>
+
+    <label for="idProfessor">Professor:</label>
+    <select th:field="*{professor}">
+        <option value="" disabled selected>Selecione um Professor</option>
+        <option th:each="curso : ${professores}"
+                th:text="${curso.nomeProfessor}"
+                th:value="${curso.idProfessor}"></option>
+    </select>
+    <br>
+
     <input type="submit" value="Salvar">
 </form>  
 </body>

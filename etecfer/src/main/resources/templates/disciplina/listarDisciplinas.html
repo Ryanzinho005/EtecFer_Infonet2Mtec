@@ -15,6 +15,8 @@
             <th>Nome</th>
             <th>Sigla</th>
             <th>Carga Horária</th>
+            <th>Curso</th>
+            <th>Professor</th>
             
             
             <th colspan="2">Ações</th>
@@ -23,6 +25,8 @@
             <td th:text="${disciplina.nomeDisciplina}">*</td>
             <td th:text="${disciplina.siglaDisciplina}">*</td>
             <td th:text="${disciplina.chDisciplina}">*</td>
+            <td th:text="${disciplina.curso.nomeCurso}">*</td>
+            <td th:text="${disciplina.professor.nomeProfessor}">*</td>
            
            
             <td>
